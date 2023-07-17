@@ -1,0 +1,89 @@
+.section {
+    max-width: 100%;
+    background-color: #1B262F;
+    padding: 150px 20px;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+    }
+
+    &__left {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__contend {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__right {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 60px;
+    }
+
+    &__title {
+        color: #FBFCFE;
+        font-family: "DM Serif Display";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 56px;
+        letter-spacing: -0.369px;
+    }
+
+    &__desc {
+        color: #FBFCFE;
+        font-family: "Public Sans";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    &__btn {
+        padding: 16px 32px;
+        background-color: #1B262F;
+        color: #FBFCFE;
+        text-align: center;
+        font-family: "Public Sans";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.115px;
+        border-radius: 24px;
+        border: 1px solid #FBFCFE;
+
+        &:active {
+            color: #1B262F;
+            background-color: #FBFCFE;
+        }
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .section {
+        &__item{
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+    }
+}
+@media only screen and (max-width:600px) {
+    .section {
+        &__right {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto;
+            gap: 60px;
+        }
+    }
+}
